@@ -8,7 +8,8 @@ const db = config.get('mongoURI'); // we can get any of the values in that json 
 const connectDB = async () => {
     try {
         await mongoose.connect(db, {
-            useNewUrlParser: true
+            useNewUrlParser: true,
+            useCreateIndex: true
         });
 
         console.log('MongoDB Connected...');
