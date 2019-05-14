@@ -21,7 +21,7 @@ router.get('/', auth, async (req, res) => { // this route is now protected
     }
 });
 
-// @route    POST api/auth
+// @route    POST api/auth (Login) 
 // @desc     Authenticate user & get token; we go here when we log in 
 // @access   Public
 router.post('/', [
@@ -35,7 +35,7 @@ router.post('/', [
         });
     }
 
-    const { email, password } = req.body;
+    const { email, password } = req.body; // we will perhaps get this from input names?? 
 
     try {
         // see if user exists
